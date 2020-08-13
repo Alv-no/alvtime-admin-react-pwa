@@ -4,6 +4,7 @@ import MenuAppBar from "./components/MenuAppBar";
 import { login, logout } from "./services/azureAd";
 import theme from "./theme";
 import { ThemeProvider } from "@material-ui/core";
+import CustomerEditModal  from "./components/CustomerEditModal";
 
 const Json = ({ data }: any) => <pre>{JSON.stringify(data, null, 4)}</pre>;
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <MenuAppBar />
+      <CustomerEditModal/>
       <div>
         <section>
           <h1>Login MVP</h1>
